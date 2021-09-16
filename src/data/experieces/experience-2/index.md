@@ -1,11 +1,9 @@
 ---
 category: 'experiences'
-company: 'Aizoon Reply'
-position: 'UI/UX Designer'
-startDate: 'Jan 2011'
-endDate: 'May 2013'
+company: 'Nagnoi'
+position: 'Consultant'
+startDate: 'Feb 2017'
+endDate: 'Jan 2018'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Improved data response time by over 70% for a Blue Cross Blue Shield provider business intelligence solution.

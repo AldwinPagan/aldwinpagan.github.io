@@ -1,9 +1,9 @@
 ---
 category: 'experiences'
-company: 'Facebook'
-position: 'Frontend Developer'
-startDate: 'May 2013'
-endDate: 'Jun 2015'
+company: 'Hometuls'
+position: 'Freelance Back End Developer'
+startDate: 'Mar 2019'
+endDate: 'Mar 2019'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Developed and deployed to AWS cloud a backend solution for a digital contractor and construction materials providers platform
