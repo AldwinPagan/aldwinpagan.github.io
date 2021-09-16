@@ -1,7 +1,7 @@
 ---
 category: 'testimonials'
 cover: './testimonial-2.jpg'
-title: 'Daisy Buchanan'
+title: 'Danny Leonardo Suarez Pabuence - Hometuls Chief Technical Advisor'
 ---
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Aldwin is a person who goes beyond and brings useful things for every single project where he is. For Hometuls it gave us an invaluable help modeling our architecture and developing a high scalable solution.
