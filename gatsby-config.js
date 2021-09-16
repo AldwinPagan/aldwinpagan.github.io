@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby.JS`,
-    description: `Gatsby Markdown Personal Website Starter, using Typescript, Styled Components, Tailwindcss and Framer Motion.`,
-    author: `Saimir Kapaj`
+    title: `Aldwin L. Pagán Pedrogo`,
+    description: `Discover how Aldwin Pagan can Help you access digital solutions`,
+    author: `Aldwin L. Pagán Pedrogo`
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -46,7 +46,7 @@ module.exports = {
         background_color: `#81e6d9`,
         theme_color: `#81e6d9`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`
+        icon: `src/assets/images/favicon.png`
       }
     },
     `gatsby-plugin-offline`,
@@ -59,6 +59,19 @@ module.exports = {
         tailwind: true,
         purgeOnly: [`src/assets/styles/global.css`]
       }
-    }
+    },
+    // {
+    //   resolve: `gatsby-plugin-intl`,
+    //   options: {
+    //     // language JSON resource path
+    //     path: `${__dirname}/src/intl`,
+    //     // supported language
+    //     languages: [`en`, `es`],
+    //     // language file path
+    //     defaultLanguage: `en`,
+    //     // option to redirect to `/en` when connecting `/`
+    //     redirect: true,
+    //   },
+    // } 
   ]
 };
