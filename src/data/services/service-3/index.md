@@ -1,6 +1,6 @@
 ---
 category: 'services'
-title: 'Copywrite'
-icon: 'edit'
-description: 'Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat.'
+title: 'Data Engineering'
+icon: 'chart-area'
+description: 'Making data into useful information for business to interpret'
 ---
