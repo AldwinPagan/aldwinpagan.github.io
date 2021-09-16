@@ -1,9 +1,9 @@
 ---
 category: 'education'
-university: 'Columbia University'
+university: 'University of Puerto Rico-Mayaguez'
 degree: 'Bachelor'
-startDate: 'Oct 2005'
-endDate: 'Jul 2008'
+startDate: 'Aug 2011'
+endDate: 'Dec 2016'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Bachelors degree with a concentration on software engineering.
