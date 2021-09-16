@@ -1,5 +1,5 @@
 ---
 category: 'skills'
-title: 'React'
+title: 'Java'
 percentage: 60
 ---
