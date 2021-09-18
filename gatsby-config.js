@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Aldwin L. Pagán Pedrogo`,
-    description: `Discover how Aldwin Pagan can Help you access digital solutions`,
+    description: `Discover how Aldwin Pagan can help you access digital solutions`,
     author: `Aldwin L. Pagán Pedrogo`
   },
   plugins: [
