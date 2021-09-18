@@ -8,7 +8,7 @@ const Footer: React.FC = () => (
   <Styled.Footer>
     <Container>
       <Styled.Links>
-        <Styled.Link href="https://github.com/AldwinPagan" rel="noreferrer noopener" target="_blank">
+        <Styled.Link href="https://github.com/aldwinpagan" rel="noreferrer noopener" target="_blank">
           GitHub
         </Styled.Link>
         <Styled.Link
@@ -18,7 +18,7 @@ const Footer: React.FC = () => (
         >
           Twitter
         </Styled.Link>
-        <Styled.Link href="https://www.linkedin.com/in/aldwinpaganpedrogo" rel="noreferrer noopener" target="_blank">
+        <Styled.Link href="https://www.linkedin.com/in/aldwinpagan" rel="noreferrer noopener" target="_blank">
           LinkedIn
         </Styled.Link>
       </Styled.Links>
