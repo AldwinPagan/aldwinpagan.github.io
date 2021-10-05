@@ -2,5 +2,5 @@
 category: 'contact'
 title: 'Email'
 icon: 'paper-plane'
-content: 'aldwinpagan@gmail.com'
+content: 'hello@aldwinpagan.com'
 ---
