@@ -7,7 +7,7 @@ import {
   faPaperPlane,
   faCloud,
   faRobot,
-  faChartArea,
+  faUserTie,
   faLightbulb
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
@@ -19,7 +19,7 @@ library.add(
   faPaperPlane,
   faCloud,
   faRobot,
-  faChartArea,
+  faUserTie,
   faLightbulb
 );
 

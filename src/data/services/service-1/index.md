@@ -1,6 +1,6 @@
 ---
 category: 'services'
-title: 'Web Apps'
-icon: 'laptop-code'
-description: 'Developing solutions humans with an user experience and mobile first mentality'
+title: 'Startup Fractional CTO'
+icon: 'user-tie'
+description: 'Providing pre-seed and seed startups technical support for their project, coach their team and/or advise on product and technology strategy'
 ---

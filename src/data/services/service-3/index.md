@@ -1,6 +1,6 @@
 ---
 category: 'services'
-title: 'Data Engineering'
-icon: 'chart-area'
-description: 'Making data into useful information for business to interpret'
+title: 'Cloud Infrastructure'
+icon: 'cloud'
+description: 'Designing and implementing scalable solutions that adjust on-demand'
 ---
