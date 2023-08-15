@@ -1,37 +1,69 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
-
 export const Timeline = styled.div`
-  ${tw`flex flex-col sm:flex-row w-full p-4 relative border-l border-indigo-200`};
+  display: flex; 
+  position: relative; 
+  padding: 1rem; 
+  flex-direction: column; 
+  border-left-width: 1px; 
+  border-color: #C7D2FE; 
+  width: 100%; 
+
+  @media (min-width: 640px) { 
+    flex-direction: row; 
+  }
 
   &:last-child {
-    ${tw`pb-0`};
+    padding-bottom: 0; 
   }
 `;
 
 export const Details = styled.div`
-  ${tw`w-full sm:w-1/3`};
+  width: 100%; 
+
+  @media (min-width: 640px) { 
+    width: 33.333333%; 
+  }
 `;
 
 export const Content = styled.div`
-  ${tw`w-full sm:w-2/3 mt-4 sm:mt-0`};
+  margin-top: 1rem; 
+  width: 100%; 
+
+  @media (min-width: 640px) { 
+    margin-top: 0; 
+  width: 66.666667%; 
+  }
 `;
 
 export const Title = styled.div`
-  ${tw`font-semibold mt-3`};
+  margin-top: 0.75rem; 
+  font-weight: 600; 
 `;
 
 export const Subtitle = styled.div`
-  ${tw`text-xs`};
+  font-size: 0.75rem;
+  line-height: 1rem; 
 `;
 
 export const Date = styled.div`
-  ${tw`text-xs border  border-teal-400 rounded-full px-2`};
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; 
+  border-radius: 9999px; 
+  border-color: #4fd1c5;
+  border-width: 1px; 
+  font-size: 0.75rem;
+  line-height: 1rem; 
   width: fit-content;
 `;
 
 export const Point = styled.span`
-  ${tw`w-3 h-3 border border-indigo-200 bg-indigo-100 rounded-full absolute`};
+  position: absolute; 
+  border-radius: 9999px; 
+  border-width: 1px; 
+  border-color: #C7D2FE; 
+  width: 0.75rem; 
+  height: 0.75rem; 
+  background-color: #E0E7FF; 
   left: -6px;
   top: 20px;
 `;

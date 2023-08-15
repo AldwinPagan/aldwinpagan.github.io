@@ -1,19 +1,32 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
 import { Link } from 'gatsby';
 
 export const Logo = styled(Link)`
-  ${tw`flex items-center mr-auto text-indigo-900 hover:text-indigo-900`};
+display: flex; 
+align-items: center; 
+color: #312E81; 
+:hover {
+  color: #3c366b;
+ }
 `;
 
 export const Text = styled.h1`
-  ${tw`text-lg`};
+font-size: 1.125rem;
+line-height: 1.75rem; 
 `;
 
 export const Image = styled.figure`
-  ${tw`w-16 h-16 mr-3 border border-teal-400 rounded-full`};
+margin-right: 0.75rem; 
+border-radius: 9999px; 
+border-width: 1px; 
+border-color: #4fd1c5;
+width: 4rem; 
+height: 4rem; 
 
-  img {
-    ${tw`border-4 border-white rounded-full`};
+
+img {
+    border-radius: 9999px; 
+    border-width: 4px; 
+    border-color: #ffffff; 
   }
 `;

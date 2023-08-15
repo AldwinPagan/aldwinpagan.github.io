@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
 
 export const Banner = styled.section`
-  ${tw`bg-gray-100 border-b border-indigo-100 `};
+    border-bottom-width: 1px; 
+    border-color: #E0E7FF; 
+    background-color: #F3F4F6; 
 `;
 
 export const Content = styled.p`
-  ${tw`mb-8`};
+    margin-bottom: 2rem; 
 `;

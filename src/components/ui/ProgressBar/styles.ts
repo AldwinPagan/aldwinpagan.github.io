@@ -1,31 +1,37 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
-
 export interface StyledProps {
   percentage: number;
 }
 
 export const ProgressBar = styled.div`
-  ${tw`p-3`};
+  padding: 0.75rem; 
 `;
 
 export const BarWrapper = styled.div`
-  ${tw`w-full h-2 bg-gray-300 rounded overflow-hidden mt-1`};
+  overflow: hidden; 
+  margin-top: 0.25rem; 
+  border-radius: 0.25rem; 
+  width: 100%; 
+  height: 0.5rem; 
+  background-color: #D1D5DB; 
 `;
 
 export const Bar = styled.div<StyledProps>`
-  ${tw`h-2 bg-teal-400`};
+  height: 0.5rem; 
+  background-color: #4fd1c5;
   width: ${({ percentage }) => `${percentage}%`};
 `;
 
 export const Content = styled.div`
-  ${tw`w-full flex justify-between`};
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%; 
 `;
 
 export const Title = styled.h3`
-  ${tw`font-semibold`};
+  font-weight: 600; 
 `;
 
 export const Percentage = styled.h3`
-  ${tw`font-semibold`};
+font-weight: 600; 
 `;

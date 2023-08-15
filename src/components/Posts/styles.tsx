@@ -1,40 +1,67 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
-
 export const Posts = styled.div`
-  ${tw`w-full flex flex-wrap`};
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 100%; 
 `;
 
 export const Post = styled.div`
-  ${tw`w-full sm:w-1/2 p-3`};
+    padding: 0.75rem; 
+    width: 100%; 
+
+    @media (min-width: 640px) { 
+      width: 50%; 
+    }
 `;
 
 export const Card = styled.div`
-  ${tw`w-full h-full rounded-lg flex flex-col overflow-hidden border border-gray-300`};
+    display: flex; 
+    overflow: hidden; 
+    flex-direction: column; 
+    border-radius: 0.5rem; 
+    border-width: 1px; 
+    border-color: #D1D5DB; 
+    width: 100%; 
+    height: 100%; 
+
 `;
 
 export const Content = styled.div`
-  ${tw`p-4 text-indigo-900`};
+    padding: 1rem; 
+    color: #312E81; 
 `;
 
 export const Image = styled.figure`
-  ${tw`w-full`};
+    width: 100%; 
 `;
 
 export const Title = styled.h3`
-  ${tw`font-semibold mb-4`};
+    margin-bottom: 1rem; 
+    font-weight: 600; 
 `;
 
 export const Description = styled.p``;
 
 export const Date = styled.h3`
-  ${tw`text-xs text-indigo-500`};
+    font-size: 0.75rem;
+    line-height: 1rem; 
+    color: #6366F1; 
 `;
 
 export const Tags = styled.div`
-  ${tw`p-4 pt-2 mt-auto`}
+    padding: 1rem; 
+    padding-top: 0.5rem; 
 `;
 
 export const Tag = styled.span`
-  ${tw`text-xs text-indigo-900 border border-teal-400 rounded-full px-2 py-1 mr-2`}
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem; 
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; 
+    margin-right: 0.5rem; 
+    border-radius: 9999px; 
+    border-width: 1px; 
+    font-size: 0.75rem;
+    line-height: 1rem; 
+    color: #312E81; 
 `;

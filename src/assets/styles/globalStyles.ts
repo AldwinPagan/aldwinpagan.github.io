@@ -1,16 +1,19 @@
 import { createGlobalStyle } from 'styled-components';
-import tw from 'tailwind.macro';
-
 export default createGlobalStyle`
   body {
-    ${tw`m-0 text-indigo-900 bg-white`};
+    margin: 0; 
+    color: #3c366b;
+    background-color: #ffffff; 
   }
 
   a {
-    ${tw`text-indigo-600 hover:text-indigo-700`};
+    color: #3c366b;
+    :hover {
+      color: #4338CA; 
+    }
   }
 
   p + p {
-    ${tw`mt-3`};
+    margin-top: 0.75rem; 
   }
 `;

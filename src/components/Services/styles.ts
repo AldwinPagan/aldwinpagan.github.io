@@ -1,10 +1,15 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
-
 export const Services = styled.div`
-  ${tw`flex flex-wrap -mx-3`};
+    display: flex; 
+    margin-left: -0.75rem;
+    margin-right: -0.75rem; 
+    flex-wrap: wrap; 
 `;
 
 export const ServiceItem = styled.div`
-  ${tw`w-full sm:w-1/2`};
+    width: 100%; 
+
+    @media (min-width: 640px) { 
+      width: 50%; 
+    }
 `;

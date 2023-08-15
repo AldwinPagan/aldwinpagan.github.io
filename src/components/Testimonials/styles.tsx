@@ -1,22 +1,41 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
-
 export const Testimonials = styled.div`
-  ${tw`max-w-screen-sm mx-auto w-full px-0 sm:px-16 mb-4`};
+    padding-left: 0;
+    padding-right: 0; 
+    margin-bottom: 1rem; 
+    width: 100%; 
+    max-width: 640px; 
+
+    @media (min-width: 640px) { 
+      padding-left: 4rem;
+    padding-right: 4rem; 
+    }
 `;
 
 export const Testimonial = styled.div`
-  ${tw`flex flex-col items-center text-center mt-4`};
+    display: flex; 
+    margin-top: 1rem; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
 `;
 
 export const Image = styled.figure`
-  ${tw`w-16 h-16 mx-auto border border-teal-400 rounded-full`};
+  border-radius: 9999px; 
+  border-width: 1px; 
+  width: 4rem; 
+  height: 4rem; 
+  border-color: #4fd1c5;
 
   img {
-    ${tw`border-4 border-white rounded-full`};
+    border-radius: 9999px; 
+    border-width: 4px; 
+    border-color: #ffffff; 
   }
 `;
 
 export const Title = styled.h3`
-  ${tw`font-semibold my-4`};
+  margin-top: 1rem;
+  margin-bottom: 1rem; 
+  font-weight: 600; 
 `;

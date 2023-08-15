@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
 
@@ -8,54 +7,103 @@ interface StyledProps {
 }
 
 export const MainNav = styled.nav<StyledProps>`
-  ${tw`sm:flex flex-col sm:flex-row sm:w-auto w-full order-last sm:order-none my-4 sm:my-0 hidden`};
-  ${({ open }) => open && tw`flex`};
+  display: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  order: 9999;
+  width: 100%;
+
+  @media (min-width: 640px) {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: row;
+    order: 0;
+    width: auto;
+  }
+  ${({ open }) => open && `display: flex;`};
 `;
 
 export const MainNavItem = motion.custom(styled(Link)`
-  ${tw`relative text-indigo-900 border-b border-transparent hover:text-indigo-900 ml-0 sm:ml-8 mt-3 sm:mt-0`};
-  width: max-content;
+  position: relative;
+  margin-left: 0;
+  margin-top: 0.75rem;
+  border-bottom-width: 1px;
+  border-color: transparent;
+  color: #3c366b;
 
-  &.active {
-    ${tw`border-teal-400`};
+  @media (min-width: 640px) {
+    margin-top: 0;
+    margin-left: 2rem;
   }
 
+  :hover {
+    color: #3c366b;
+  }
+  width: max-content;
+  &.active {
+    border-color: #4fd1c5;
+  }
+  
   &:before {
-    ${tw`absolute w-full bg-teal-400 h-px left-0 invisible`};
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 1px;
     content: '';
     bottom: -1px;
     transform: scaleX(0);
     transition: 0.2s;
+    background-color: #4fd1c5;
   }
 
   &:hover:before {
-    ${tw`visible`};
+    visibility: visible;
     transform: scaleX(1);
   }
 `);
 
 export const ToogleMainNav = styled.button<StyledProps>`
-  ${tw`flex flex-col items-end justify-center cursor-pointer w-6 h-5 sm:hidden`};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 1.5rem;
+  height: 1.25rem;
+  cursor: pointer;
+
+  @media (min-width: 640px) {
+    display: none;
+  }
   outline: none !important;
 
   span {
-    ${tw`bg-indigo-500 inline-block w-6 h-px`};
+    display: inline-block;
+    width: 1.5rem;
+    height: 1px;
+    background-color: #667eea;
+
     transition: 0.2s;
 
     &:first-child {
-      ${({ open }) => (open ? tw`-mb-px` : tw`mb-1`)};
+      ${({ open }) => (open ? `margin-bottom: -1px; ` : `margin-bottom: 0.25rem; `)};
       transform: ${({ open }) => (open ? 'rotate(45deg)' : 'none')};
     }
 
     &:last-child {
-      ${({ open }) => (open ? tw`-mt-px` : tw`mt-1`)};
+      ${({ open }) => (open ? `margin-top: -1px; ` : `margin-top: 0.25rem; `)};
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'none')};
     }
 
     &:nth-child(2) {
-      ${tw`bg-teal-400 inline-block w-8 h-px`};
+      display: inline-block;
+      width: 2rem;
+      height: 1px;
+      background-color: #4fd1c5;
 
-      ${({ open }) => (open ? tw`opacity-0` : tw`opacity-1`)};
+      ${({ open }) => (open ? `opacity: 0;` : `opacity: 0;`)};
       transform: ${({ open }) => (open ? 'translate(20px)' : 'none')};
     }
   }

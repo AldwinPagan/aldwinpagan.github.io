@@ -1,18 +1,34 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
-
 export const Footer = styled.footer`
-  ${tw`border-t border-gray-200 py-4`};
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    border-top-width: 1px; 
+    border-color: #E5E7EB; 
 `;
 
 export const Links = styled.div`
-  ${tw`flex items-center justify-center w-full`};
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+
 
   a {
-    ${tw`text-indigo-900 hover:text-indigo-600 mx-2`};
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; 
+    color: #3c366b;t
+
+    :hover {
+    color: #4F46E5; 
+    }
   }
 `;
 
 export const Link = styled.a`
-  ${tw`text-indigo-900 hover:text-indigo-600 mx-2`};
+margin-left: 0.5rem;
+margin-right: 0.5rem; 
+color: #312E81; 
+:hover {
+  color: #5a67d8;
+ }
 `;

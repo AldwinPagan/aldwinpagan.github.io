@@ -1,35 +1,58 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
-
 export interface StyledProps {
   center?: boolean;
 }
 
 export const TitleSection = styled.div`
-  ${tw`flex flex-col w-full`};
+display: flex; 
+flex-direction: column; 
+width: 100%; 
 `;
 
 export const Title = styled.h2<StyledProps>`
-  ${tw`uppercase mb-4 text-lg font-bold w-full text-left`};
-  ${({ center }) => center && tw`text-center`};
+margin-bottom: 1rem; 
+width: 100%; 
+font-size: 1.125rem;
+line-height: 1.75rem; 
+font-weight: 700; 
+text-align: left; 
+text-transform: uppercase; 
+  ${({ center }) => center && `text-align: center;`};
 `;
 
 export const SubTitle = styled.h4<StyledProps>`
-  ${tw`text-xs text-indigo-600 w-full text-left`};
-  ${({ center }) => center && tw`text-center`};
+width: 100%; 
+font-size: 0.75rem;
+line-height: 1rem; 
+text-align: left; 
+color: #4F46E5; 
+  ${({ center }) => center && `text-align: center;`};
 `;
 
 export const Separator = styled.h2<StyledProps>`
-  ${tw`relative w-2 h-8 mb-6 -mt-2`};
-  ${({ center }) => center && tw`mx-auto`};
+position: relative; 
+margin-bottom: 1.5rem; 
+margin-top: -0.5rem; 
+width: 0.5rem; 
+height: 2rem; 
+  ${({ center }) => center && `
+  margin-right: auto; margin-left: auto;
+  `};
 
   &:before {
     content: '';
-    ${tw`bg-indigo-500 h-full w-px absolute left-0`};
+    position: absolute; 
+    left: 0; 
+    width: 1px; 
+    height: 100%; 
+    background-color: #6366F1; 
   }
 
   &:after {
     content: '';
-    ${tw`bg-teal-400 h-6 w-px absolute ml-1`};
+    position: absolute; 
+    margin-left: 0.25rem; 
+    width: 1px; 
+    height: 1.5rem; 
   }
 `;

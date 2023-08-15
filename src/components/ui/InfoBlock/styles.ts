@@ -1,27 +1,45 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
-
 export interface StyledProps {
   center?: boolean;
 }
 
 export const InfoBlock = styled.div<StyledProps>`
-  ${tw`flex flex-col my-4 mx-3 p-4 bg-white rounded-lg border border-gray-300`};
-  ${({ center }) => center && tw`items-center`};
+  display: flex; 
+  padding: 1rem; 
+  margin-left: 0.75rem;
+  margin-right: 0.75rem; 
+  margin-top: 1rem;
+  margin-bottom: 1rem; 
+  flex-direction: column; 
+  border-radius: 0.5rem; 
+  border-width: 1px; 
+  border-color: #D1D5DB; 
+  background-color: #ffffff; 
+  ${({ center }) => center && `align-items: center;`};
 `;
 
 export const Icon = styled.span`
-  ${tw`flex items-center justify-center w-10 h-10 text-indigo-500 border border-teal-400 rounded-full mb-2`};
+  display: flex; 
+  margin-bottom: 0.5rem; 
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 9999px; 
+  border-width: 1px; 
+  border-color: #4fd1c5;
+  width: 2.5rem; 
+  height: 2.5rem; 
+  color: #6366F1; 
 `;
 
 export const Wrapper = styled.div<StyledProps>`
-  ${({ center }) => center && tw`text-center`};
+  ${({ center }) => center && `text-align: center; `};
 `;
 
 export const Title = styled.h3`
-  ${tw`text-md mt-1 font-semibold`};
+  margin-top: 0.25rem; 
+  font-weight: 600; 
 `;
 
 export const Content = styled.p`
-  ${tw`mt-1`};
+  margin-top: 0.25rem; 
 `;

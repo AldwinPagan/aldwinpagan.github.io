@@ -1,10 +1,14 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
-
 export const Skills = styled.div`
-  ${tw`flex flex-wrap w-full`};
+display: flex; 
+flex-wrap: wrap; 
+width: 100%; 
 `;
 
 export const Skill = styled.div`
-  ${tw`w-full sm:w-1/2`};
+    width: 100%; 
+
+    @media (min-width: 640px) { 
+      width: 50%; 
+    }
 `;
