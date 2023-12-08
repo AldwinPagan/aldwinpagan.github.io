@@ -1,34 +1,64 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig, PluginRef } from "gatsby"
+import "dotenv/config"
+
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `personal-website`,
-    siteUrl: `https://www.aldwinpagan.com`
+    // You can overwrite values here that are used for the SEO component
+    // You can also add new values here to query them like usual
+    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-cara/gatsby-config.mjs
+    siteTitle: `Aldwin Pagan`,
+    siteTitleAlt: `Aldwin Pagan - Revolutionize Your Business with Expert Software Solutions`,
+    siteHeadline: `Aldwin Pagan - Revolutionize Your Business with Expert Software Solutions`,
+    siteUrl: `https://www.aldwinpagan.com`,
+    siteDescription: `Your trusted partner for innovative software solutions that drive growth and transformation.`,
+    siteImage: `/banner.jpg`,
+    siteLanguage: `en`,
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
-  graphqlTypegen: true,
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/assets/images/favicon.png"
-    }
-  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/assets/images/"
+  trailingSlash: `always`,
+  plugins: [
+    {
+      resolve: `@lekoarts/gatsby-theme-cara`,
+      // See the theme's README for all available options
+      options: {},
     },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Cara - @lekoarts/gatsby-theme-cara`,
+        short_name: `Cara`,
+        description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
+        start_url: `/`,
+        background_color: `#141821`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#f6ad55`,
+        display: `standalone`,
+        icons: [
+          {
+            src: `/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
+      },
     },
-    __key: "pages"
-  }]
-};
+    // You can remove this plugin if you don't need it
+    shouldAnalyseBundle && {
+      resolve: `gatsby-plugin-webpack-statoscope`,
+      options: {
+        saveReportTo: `${__dirname}/public/.statoscope/_bundle.html`,
+        saveStatsTo: `${__dirname}/public/.statoscope/_stats.json`,
+        open: false,
+      },
+    },
+  ].filter(Boolean) as Array<PluginRef>,
+}
 
-export default config;
+export default config
