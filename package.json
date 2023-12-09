@@ -10,7 +10,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages --git git -d public"
+    "deploy": "gatsby build && gh-pages -d public --cname aldwinpagan.com"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-cara": "^5.1.4",
