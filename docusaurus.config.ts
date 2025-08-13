@@ -12,6 +12,7 @@ const config: Config = {
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    experimental_faster: true,
   },
 
   // Set the production url of your site here
@@ -145,7 +146,39 @@ const config: Config = {
     metadata: [{name: 'twitter:card', content: 'summary'}],
 
   } satisfies Preset.ThemeConfig,
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        indexPages: true,
+        docsRouteBasePath: '/docs',
+        hashed: true,
+        language: ['en', 'es'],
+        highlightSearchTermsOnTargetPage: false,
+        searchResultContextMaxLength: 50,
+        searchResultLimits: 8,
+        searchBarShortcut: true,
+        searchBarShortcutHint: true
+      }
+    ]
+  ],
+  plugins:[
+    ['./src/plugins/tailwind-config.js',{}],
+    [
+      'ideal-image',
+      /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
+      ({
+        quality: 70,
+
+        max: 1030,
+        min: 640,
+        steps: 2,
+        // Use false to debug, but it incurs huge perf costs
+        disableInDev: true
+      })
+    ],
   
+  ]
 };
 
 export default config;
