@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Aldwin Pagan',
+  tagline: 'Aldwin Pagan - Revolutionize Your Business with Expert Software Solutions',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -16,7 +16,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://www.aldwinpagan.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -69,29 +69,24 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
+      // title: 'My Site',
+      // logo: {
+      //   alt: 'My Site Logo',
+      //   src: 'img/logo.svg',
+      // },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
-          position: 'left',
+          position: 'right',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        {to: '/blog', label: 'Blog', position: 'right'},
       ],
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Aldwin Pagan. Built with Docusaurus.`,
       links: [
         {
           title: 'Docs',
@@ -102,23 +97,23 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
+        // {
+        //   title: 'Community',
+        //   items: [
+        //     {
+        //       label: 'Stack Overflow',
+        //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        //     },
+        //     {
+        //       label: 'Discord',
+        //       href: 'https://discordapp.com/invite/docusaurus',
+        //     },
+        //     {
+        //       label: 'X',
+        //       href: 'https://x.com/docusaurus',
+        //     },
+        //   ],
+        // },
         {
           title: 'More',
           items: [
@@ -128,8 +123,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/AldwinPagan',
             },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/aldwinpagan/', 
+            }
           ],
         },
       ],
@@ -177,7 +176,33 @@ const config: Config = {
         disableInDev: true
       })
     ],
-  
+    //     [
+    //   './src/plugins/blog-plugin',
+    //   {
+    //     path: 'blog',
+    //     editLocalizedFiles: false,
+    //     blogTitle: 'Blog',
+    //     blogDescription: 'Blog description is here ...',
+    //     blogSidebarCount: 'ALL',
+    //     blogSidebarTitle: 'List blog',
+    //     routeBasePath: 'blog',
+    //     include: ['**/*.md', '**/*.mdx'],
+    //     exclude: [
+    //       '**/_*.{js,jsx,ts,tsx,md,mdx}',
+    //       '**/_*/**',
+    //       '**/*.test.{js,jsx,ts,tsx}',
+    //       '**/__tests__/**'
+    //     ],
+    //     postsPerPage: 6,
+    //     truncateMarker: /<!--\s*(truncate)\s*-->/,
+    //     showReadingTime: true,
+    //     onUntruncatedBlogPosts: 'ignore',
+    //     // Remove this to remove the "edit this page" links.
+    //     editUrl:
+    //       'https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template/tree/main/',
+    //     remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }]]
+    //   }
+    // ]
   ]
 };
 
