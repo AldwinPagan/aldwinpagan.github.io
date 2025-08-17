@@ -1,48 +1,35 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { Target, Wrench, MessageSquareWarning, Repeat } from "lucide-react"
+import { motion } from "framer-motion"
+const challenges = [
+  {
+    title: "No Clear Starting Point",
+    description: "Without defined goals, it's easy to waste time and resources building the wrong thing.",
+    icon: <Target className="w-6 h-6 text-destructive" />,
+  },
+  {
+    title: "Doing It All Yourself",
+    description: "Founders end up writing fragile code alone. This slows progress and leads to tech debt.",
+    icon: <Wrench className="w-6 h-6 text-destructive" />,
+  },
+  {
+    title: "No Feedback Loop",
+    description: "Lack of structure to gather user feedback results in features that don’t meet real needs.",
+    icon: <MessageSquareWarning className="w-6 h-6 text-destructive" />,
+  },
+  {
+    title: "Can't Iterate Fast Enough",
+    description: "When changes feel risky or break things, teams can’t move fast enough to stay competitive.",
+    icon: <Repeat className="w-6 h-6 text-destructive" />,
+  },
+]
 
 export default function ChallengesSection() {
-  const challenges = [
-    {
-      title: "No Clear Starting Point",
-      icon: <Target className="w-6 h-6 text-destructive" />,
-      problem:
-        "Without well-defined goals, teams often build without a clear outcome — wasting time and money.",
-      solution:
-        "I help teams clarify business objectives and turn them into a focused execution plan.",
-    },
-    {
-      title: "Doing It All Yourself",
-      icon: <Wrench className="w-6 h-6 text-destructive" />,
-      problem:
-        "Founders end up building 'vibe-coded' apps that aren’t scalable or maintainable.",
-      solution:
-        "I refactor and scale MVPs into stable, production-ready systems so you can delegate with confidence.",
-    },
-    {
-      title: "No Feedback Loop",
-      icon: <MessageSquareWarning className="w-6 h-6 text-destructive" />,
-      problem:
-        "Skipping structured feedback leads to features that miss the mark — or go unused.",
-      solution:
-        "I implement systems to collect, interpret, and act on user feedback throughout development.",
-    },
-    {
-      title: "Can't Iterate Fast Enough",
-      icon: <Repeat className="w-6 h-6 text-destructive" />,
-      problem:
-        "Changing features feels risky and slow, which stalls product innovation.",
-      solution:
-        "I build infrastructure and workflows that enable fast iteration without breaking what works.",
-    },
-  ]
-
   return (
     <section
       id="challenges"
-      className="py-16 px-4 sm:px-8 md:px-16 max-w-6xl mx-auto"
+      className="py-20 px-4 sm:px-8 md:px-16 max-w-6xl mx-auto"
     >
       <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-12">
         Challenges in the AI Era
@@ -50,20 +37,23 @@ export default function ChallengesSection() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {challenges.map((item, index) => (
-          <Card key={index} className="hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-row items-center gap-4">
-              {item.icon}
-              <CardTitle>{item.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-base font-medium mb-2">❌ Problem:</p>
-              <p className="text-sm text-muted-foreground mb-4">
-                {item.problem}
+          <motion.div
+            key={index}
+            className="rounded-xl bg-muted/30 p-6 border border-border shadow-md hover:shadow-xl transition-all"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.4 }}
+          >
+            <div className="flex flex-col items-start gap-4">
+              <div className="flex items-center gap-3">
+                {item.icon}
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                {item.description}
               </p>
-              <p className="text-base font-medium mb-2">✅ How I Help:</p>
-              <p className="text-sm text-muted-foreground">{item.solution}</p>
-            </CardContent>
-          </Card>
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>

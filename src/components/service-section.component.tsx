@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { BrainCircuit, ServerCog, Rocket, Hammer, Wand2 } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function ServicesSection() {
   const services = [
@@ -40,23 +41,32 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-16 px-4 sm:px-8 md:px-16 max-w-6xl mx-auto"
+      className="py-20 px-4 sm:px-8 md:px-16 max-w-6xl mx-auto text-center"
     >
-      <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl font-semibold mb-12">
         Services & Expertise
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {services.map((service, index) => (
-          <Card key={index} className="hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-row items-center gap-4">
-              {service.icon}
-              <CardTitle>{service.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground text-sm">{service.description}</p>
-            </CardContent>
-          </Card>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.4 }}
+          >
+            <Card className="w-[300px] h-full hover:bg-muted hover:shadow-xl transition-all">
+              <CardHeader className="flex flex-row items-center gap-4">
+                {service.icon}
+                <CardTitle>{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  {service.description}
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
       </div>
     </section>

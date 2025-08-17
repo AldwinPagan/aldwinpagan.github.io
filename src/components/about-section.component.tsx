@@ -1,27 +1,38 @@
 // 'use client'
 
 import { Separator } from "./ui/separator"
+import { motion } from "framer-motion"
 
 export default function AboutSection() {
   return (
     <section
       id="about"
-      className="py-16 px-4 sm:px-8 md:px-16 max-w-5xl mx-auto"
+      className="py-20 px-4 sm:px-8 md:px-16 max-w-5xl mx-auto"
     >
-      <div className="flex flex-col md:flex-row items-center gap-8">
+      <div className="flex flex-col md:flex-row items-center gap-10 group">
         {/* Portrait */}
-        <div className="relative w-48 h-48 md:w-56 md:h-56 shrink-0">
+        <motion.div
+          className="relative w-48 h-48 md:w-56 md:h-56 shrink-0"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-primary/10 to-muted shadow-lg -translate-x-2 -translate-y-2" />
           {/* TODO: Verify docusaurus image plugin */}
           <img
-            src="/images/aldwin.jpg" // <- replace with your actual image path
+            src="/img/aldwin.jpg"
             alt="Aldwin Pagán"
             className="relative z-10 w-full h-full object-cover rounded-xl border border-border shadow-md"
           />
-        </div>
+        </motion.div>
 
         {/* Text */}
-        <div className="text-left">
+        <motion.div
+          className="text-left"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           <h2 className="text-3xl sm:text-4xl font-semibold mb-2">
             Fractional CTO & Solutions Architect
           </h2>
@@ -35,19 +46,20 @@ export default function AboutSection() {
             <p>
               I’m Aldwin Pagán — a Fractional CTO and Solutions Architect helping teams align, innovate, and deliver results faster. With over 9 years of experience leading both startup and enterprise software initiatives, I bridge business vision and technical execution.
             </p>
-            <p>
-              I help businesses:
+            <p className="relative pl-4 border-l-4 border-primary/70">
+              I align stakeholders with a clear technology roadmap that scales with your growth and budget.
             </p>
-            <ul className="ml-5 list-disc">
-              <li>Align stakeholders with a clear technology roadmap</li>
-              <li>Architect scalable, cost-effective systems</li>
-              <li>Streamline operations through automation and modern infrastructure</li>
-            </ul>
+            <p className="relative pl-4 border-l-4 border-primary/70">
+              I streamline operations through automation, reducing complexity without compromising quality.
+            </p>
+            <p className="relative pl-4 border-l-4 border-primary/70">
+              I transform high-level goals into secure, scalable, and maintainable digital solutions.
+            </p>
             <p>
-              Partners know me for going beyond expectations, bringing fresh ideas, and making complex systems easy to understand. If you need a trusted technology partner to design, build, or scale your solution in the AI era — let’s talk.
+              Partners know me for going beyond expectations, bringing fresh ideas, and making complex systems easy to understand.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
