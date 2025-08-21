@@ -55,7 +55,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.4 }}
           >
-            <Card className="w-[300px] h-full hover:bg-muted hover:shadow-xl transition-all">
+            <Card className="w-[500px] h-full hover:bg-muted hover:shadow-xl transition-all">
               <CardHeader className="flex flex-row items-center gap-4">
                 {service.icon}
                 <CardTitle>{service.title}</CardTitle>

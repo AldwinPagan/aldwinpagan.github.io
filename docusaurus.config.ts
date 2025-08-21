@@ -6,8 +6,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Aldwin Pagan',
-  tagline: 'Aldwin Pagan - Revolutionize Your Business with Expert Software Solutions',
-  favicon: 'img/favicon.ico',
+  tagline: 'Aldwin Pagan - Scalable, cost-efficient systems for the AI era.',
+  // favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -28,6 +28,8 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  githubHost: 'github.com',
+  deploymentBranch: 'gh-pages',
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -67,36 +69,36 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      // title: 'My Site',
+      title: 'Aldwin Pagan',
+
       // logo: {
       //   alt: 'My Site Logo',
       //   src: 'img/logo.svg',
       // },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'right',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'right'},
+
+        {to: '#about', label: 'About', position: 'right'},
+        {to: '#services', label: 'Services', position: 'right'},
+        {to: '#challenges', label: 'Why Choose Me?', position: 'right'},
+        {to: '#testimonials', label: 'Testimonials', position: 'right'},
+        {to: '#contact', label: 'Contact Me', position: 'right'},
+        // {to: '/blog', label: 'Blog', position: 'right'},
       ],
     },
     footer: {
-      style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} Aldwin Pagan. Built with Docusaurus.`,
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
+        // {
+        //   title: 'Docs',
+        //   items: [
+        //     {
+        //       label: 'Tutorial',
+        //       to: '/docs/intro',
+        //     },
+        //   ],
+        // },
         // {
         //   title: 'Community',
         //   items: [
@@ -115,60 +117,82 @@ const config: Config = {
         //   ],
         // },
         {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/AldwinPagan',
-            },
-            {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/aldwinpagan/', 
-            }
-          ],
+          label: 'GitHub',
+          to: 'https://github.com/AldwinPagan',
+          // items: [
+          //   {
+          //     label: 'Blog',
+          //     to: '/blog',
+          //   },
+          //   {
+          //     label: 'GitHub',
+          //     href: 'https://github.com/AldwinPagan',
+          //   },
+          //   {
+          //     label: 'LinkedIn',
+          //     href: 'https://www.linkedin.com/in/aldwinpagan/', 
+          //   }
+          // ],
         },
+        {
+          label: 'LinkedIn',
+          to: 'https://www.linkedin.com/in/aldwinpagan/',
+        },
+
       ],
     },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
+    // prism: {
+    //   theme: prismThemes.github,
+    //   darkTheme: prismThemes.dracula,
+
+    // },
+    
      colorMode: {
-      defaultMode: 'dark',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
-    metadata: [{name: 'twitter:card', content: 'summary'}],
+    metadata: [
+  { name: 'description', content: 'I help business owners future-proof their tech with scalable systems, cost-efficient architecture, and AI-enhanced solutions.' },
+  { name: 'robots', content: 'index, follow' },
+  { name: 'keywords', content: 'Fractional CTO, Solutions Architect, Scalable Systems, AI Integration, Tech Strategy, Software Architecture, Business Technology, Aldwin Pagan' },
+  { name: 'author', content: 'Aldwin Pagán' },
+
+  // Twitter
+  // { name: 'twitter:card', content: 'summary_large_image' },
+  { name: 'twitter:title', content: 'Aldwin Pagán – Fractional CTO & Solutions Architect' },
+  { name: 'twitter:description', content: 'I help business owners future-proof their tech with scalable systems, cost-efficient architecture, and AI-enhanced solutions.' },
+  { name: 'twitter:image', content: 'https://www.aldwinpagan.com/og-image.png' },
+  { name: 'twitter:creator', content: '@aldwinpagan' },
+
+  // Theme
+  { name: 'theme-color', content: '#4C6FFF' }
+],
 
   } satisfies Preset.ThemeConfig,
   themes: [
-    [
-      '@easyops-cn/docusaurus-search-local',
-      {
-        indexPages: true,
-        docsRouteBasePath: '/docs',
-        hashed: true,
-        language: ['en', 'es'],
-        highlightSearchTermsOnTargetPage: false,
-        searchResultContextMaxLength: 50,
-        searchResultLimits: 8,
-        searchBarShortcut: true,
-        searchBarShortcutHint: true
-      }
-    ]
+    // [
+    //   '@easyops-cn/docusaurus-search-local',
+    //   {
+    //     indexPages: true,
+    //     docsRouteBasePath: '/docs',
+    //     hashed: true,
+    //     language: ['en', 'es'],
+    //     highlightSearchTermsOnTargetPage: false,
+    //     searchResultContextMaxLength: 50,
+    //     searchResultLimits: 8,
+    //     searchBarShortcut: true,
+    //     searchBarShortcutHint: true
+    //   }
+    // ]
   ],
   plugins:[
-    ['./src/plugins/tailwind-config.js',{}],
+    ['./src/plugins/tailwind-config.ts',{}],
     [
       'ideal-image',
       /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
       ({
         quality: 70,
-
         max: 1030,
         min: 640,
         steps: 2,

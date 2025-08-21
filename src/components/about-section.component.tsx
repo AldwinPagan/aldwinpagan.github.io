@@ -1,4 +1,5 @@
 // 'use client'
+import AldwinImageUrl from '@site/static/img/aldwin.jpg';
 
 import { Separator } from "./ui/separator"
 import { motion } from "framer-motion"
@@ -17,12 +18,11 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-primary/10 to-muted shadow-lg -translate-x-2 -translate-y-2" />
-          {/* TODO: Verify docusaurus image plugin */}
+          {/* <div className="absolute inset-0 rounded-xl shadow-lg -translate-x-2 -translate-y-2" /> */}
           <img
-            src="/img/aldwin.jpg"
+            src={AldwinImageUrl}
             alt="Aldwin Pagán"
-            className="relative z-10 w-full h-full object-cover rounded-xl border border-border shadow-md"
+            className="relative z-10 w-full h-fit object-cover rounded-xl border border-border shadow-md"
           />
         </motion.div>
 

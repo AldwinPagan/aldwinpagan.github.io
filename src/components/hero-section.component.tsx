@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 export default function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-16 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-background to-muted/40 blur-xl opacity-40" />
+      <div className="absolute inset-0 -z-10 blur-xl opacity-40" />
 
       <motion.h1
         className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
@@ -33,12 +33,18 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
-        <Button asChild size="lg">
-          <a href="#contact">
-            Start the Conversation <ArrowRight className="ml-2 w-4 h-4" />
+        <Button size="lg" >
+          <a
+            href="#contact"
+          >
+            <span className="text-white flex items-center">
+Start the Conversation <ArrowRight className="ml-2 w-4 h-4" />
+            </span>
+            
           </a>
         </Button>
       </motion.div>
+
     </section>
   )
 }

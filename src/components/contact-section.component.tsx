@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { Button } from "./ui/button"
 
 export default function ContactSection() {
   return (
@@ -22,18 +23,25 @@ export default function ContactSection() {
           Let’s explore how I can help you scale your product, integrate AI, or bring technical clarity to your roadmap.
         </p>
 
-        <a
-          href="https://yourtypeformlink.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition text-lg"
-        >
-          Let’s Build Together <ArrowRight className="w-4 h-4" />
-        </a>
+              <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        <Button size="lg" >
+          <a
+            href="https://yourtypeformlink.com"
+          >
+            <span className="text-white flex items-center">
+Let’s Build Together <ArrowRight className="ml-2 w-4 h-4" />
+            </span>
+            
+          </a>
+        </Button>
+      </motion.div>
       </motion.div>
 
-      <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-gradient-to-tr from-primary/20 to-muted/10 rounded-full blur-3xl opacity-30" />
-      <div className="absolute -bottom-20 -right-20 w-[400px] h-[400px] bg-gradient-to-br from-muted/10 to-primary/20 rounded-full blur-2xl opacity-20" />
+
     </section>
   )
 }

@@ -1,5 +1,5 @@
 'use client'
-
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { Target, Wrench, MessageSquareWarning, Repeat } from "lucide-react"
 import { motion } from "framer-motion"
 const challenges = [
@@ -35,24 +35,25 @@ export default function ChallengesSection() {
         Challenges in the AI Era
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {challenges.map((item, index) => (
           <motion.div
             key={index}
-            className="rounded-xl bg-muted/30 p-6 border border-border shadow-md hover:shadow-xl transition-all"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.4 }}
           >
-            <div className="flex flex-col items-start gap-4">
-              <div className="flex items-center gap-3">
+            <Card className="w-[500px] h-full hover:bg-muted hover:shadow-xl transition-all">
+              <CardHeader className="flex flex-row items-center gap-4">
                 {item.icon}
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                {item.description}
-              </p>
-            </div>
+                <CardTitle>{item.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
+              </CardContent>
+            </Card>
           </motion.div>
         ))}
       </div>

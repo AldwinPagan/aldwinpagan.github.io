@@ -15,6 +15,7 @@ import WhyChooseSection from '../components/why-choose-section.component';
 import TestimonialsSection from '../components/testimonial-section.component';
 import { Contact } from 'lucide-react';
 import ContactSection from '../components/contact-section.component';
+import ScrollToTopButton from '../components/scroll-to-top-button';
 
 function HomepageHeader() {
   
@@ -58,6 +59,7 @@ export default function Home(): ReactNode {
         <TestimonialsSection/>
         <ContactSection />
       </main>
+      <ScrollToTopButton/>
     </Layout>
   );
 }
