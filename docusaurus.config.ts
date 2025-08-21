@@ -25,11 +25,12 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'AldwinPagan', // Usually your GitHub org/user name.
   projectName: 'aldwinpagan.github.io', // Usually your repo name.
+  githubHost: 'github.com',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: true,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  githubHost: 'github.com',
-  deploymentBranch: 'gh-pages',
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
