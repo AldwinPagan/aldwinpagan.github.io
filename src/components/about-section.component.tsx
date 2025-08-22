@@ -1,6 +1,3 @@
-// 'use client'
-import AldwinImageUrl from '@site/static/img/aldwin.jpg';
-
 import { Separator } from "./ui/separator"
 import { motion } from "framer-motion"
 
@@ -18,9 +15,9 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          {/* <div className="absolute inset-0 rounded-xl shadow-lg -translate-x-2 -translate-y-2" /> */}
+          <div className="absolute inset-0 rounded-xl shadow-lg -translate-x-2 -translate-y-2" />
           <img
-            src={AldwinImageUrl}
+            src={"/img/aldwin.jpg"}
             alt="Aldwin Pagán"
             className="relative z-10 w-full h-fit object-cover rounded-xl border border-border shadow-md"
           />
