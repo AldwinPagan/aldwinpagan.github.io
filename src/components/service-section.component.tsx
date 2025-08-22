@@ -1,5 +1,3 @@
-'use client'
-
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { BrainCircuit, ServerCog, Rocket, Hammer, Wand2 } from "lucide-react"
 import { motion } from "framer-motion"
@@ -47,7 +45,7 @@ export default function ServicesSection() {
         Services & Expertise
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -55,7 +53,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.4 }}
           >
-            <Card className="w-[500px] h-full hover:bg-muted hover:shadow-xl transition-all">
+            <Card className="hover:bg-muted hover:shadow-xl transition-all">
               <CardHeader className="flex flex-row items-center gap-4">
                 {service.icon}
                 <CardTitle>{service.title}</CardTitle>

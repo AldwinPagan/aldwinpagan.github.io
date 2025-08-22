@@ -1,5 +1,3 @@
-'use client'
-
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "./ui/button"
@@ -30,7 +28,8 @@ export default function ContactSection() {
       >
         <Button size="lg" >
           <a
-            href="https://yourtypeformlink.com"
+            href="https://forms.gle/cu2vNfYstvaRoKuU7"
+            target="_blank"
           >
             <span className="text-white flex items-center">
 Let’s Build Together <ArrowRight className="ml-2 w-4 h-4" />
