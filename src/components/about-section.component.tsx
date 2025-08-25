@@ -15,17 +15,16 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute inset-0 rounded-xl shadow-lg -translate-x-2 -translate-y-2" />
           <img
             src={"/img/aldwin.jpg"}
             alt="Aldwin Pagán"
-            className="relative z-10 w-full h-fit object-cover rounded-xl border border-border shadow-md"
+            className="w-full h-full object-cover rounded-xl border border-border shadow-md"
           />
         </motion.div>
 
         {/* Text */}
         <motion.div
-          className="text-left"
+          className="text-left w-full md:w-auto"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
