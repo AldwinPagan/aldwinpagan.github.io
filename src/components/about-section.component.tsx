@@ -7,10 +7,10 @@ export default function AboutSection() {
       id="about"
       className="py-20 px-4 sm:px-8 md:px-16 max-w-5xl mx-auto"
     >
-      <div className="flex flex-col md:flex-row items-center gap-10 group">
+      <div className="flex flex-col md:flex-row items-center gap-10 flex-wrap">
         {/* Portrait */}
         <motion.div
-          className="relative w-48 h-48 md:w-56 md:h-56 shrink-0"
+          className="w-48 h-full md:w-56 shrink-0"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
