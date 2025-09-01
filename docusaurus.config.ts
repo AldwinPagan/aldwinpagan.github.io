@@ -190,7 +190,7 @@ const config: Config = {
   plugins:[
     ['./src/plugins/tailwind-config.ts',{}],
     [
-      'ideal-image',
+      '@docusaurus/plugin-ideal-image',
       /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
       ({
         quality: 70,

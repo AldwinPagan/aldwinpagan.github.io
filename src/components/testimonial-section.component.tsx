@@ -12,7 +12,7 @@ import { motion } from "framer-motion"
           +"His effective communication skills and ability to visually explain detailed diagrams have played a crucial role in enhancing the product and navigating high-stress circumstances with ease.",
         name: "Andres Calle",
         role: "CTO, AppLivio",
-        image: "/img/testimonials/carlos.jpg",
+        image: "/img/testimonials/andres-calle.jpg",
       },
     {
       quote:
@@ -29,7 +29,7 @@ import { motion } from "framer-motion"
         + "In November 2024, Aldwin took on the role of Technical Lead, where he has gone above and beyond in guiding our team toward excellence.",
       name: "Carlos Gonzalez",
       role: "Principal, Integrum",
-      image: "/img/testimonials/luis.jpg",
+      image: "/img/testimonials/carlos-gonzalez.jpg",
     },
   ]
 
