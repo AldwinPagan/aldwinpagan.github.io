@@ -11,7 +11,7 @@ That’s the situation I walked into. Here’s how we migrated everything into t
 
 <!-- truncate -->
 
-# Context
+## Context
 
 My client had been working with an external technology partner for years.  
 That partner owned and operated **11 systems and 8 services**, all at different stages:
@@ -20,7 +20,7 @@ That partner owned and operated **11 systems and 8 services**, all at different 
 - Some were under active development  
 - Others were already live in production  
 
-Strategically, my client had decided to **phase out the external partner** and bring these projects fully in-house.
+Strategically, my client had decided to **transition away from the external partner** and bring these projects fully in-house.
 
 On paper, that sounded straightforward. In practice, there were serious risks:
 
@@ -33,9 +33,9 @@ Transfer the systems to my client’s cloud ecosystem, create a predictable way 
 
 ---
 
-# My role
+## My role
 
-I joined as a **Cloud & DevOps Lead / Fractional CTO**, with three main responsibilities:
+I joined as a **Tehnical Lead**, with three main responsibilities:
 
 - Plan and execute the **transition from the external partner**  
 - Migrate systems and services into the client’s own cloud accounts  
@@ -45,9 +45,9 @@ In short: make sure the migration didn’t just move code, but moved **control**
 
 ---
 
-# What I did
+## What I did
 
-## 1. Turned scattered knowledge into structured ownership
+### 1. Turned scattered knowledge into structured ownership
 
 Before moving anything, we had to understand what we were actually taking over.
 
@@ -61,7 +61,7 @@ This took us from “only two people at the partner really know how this works�
 
 ---
 
-## 2. Migrated systems into the client’s own cloud ecosystem
+### 2. Migrated systems into the client’s own cloud ecosystem
 
 With access and documentation under control, the next step was to migrate the systems out of the partner’s infrastructure and into my client’s.
 
@@ -76,7 +76,7 @@ They **owned the infrastructure, accounts, and configuration** behind their syst
 
 ---
 
-## 3. Standardized CI/CD across key projects
+### 3. Standardized CI/CD across key projects
 
 Owning the stack is only useful if you can ship updates in a predictable way.
 
@@ -96,7 +96,7 @@ CI/CD stopped being a set of ad hoc scripts and became a **shared, reliable syst
 
 ---
 
-## 4. Enabled the internal team to be self-sufficient
+### 4. Enabled the internal team to be self-sufficient
 
 A big success criterion for me was that the client’s team **shouldn’t depend on me** long-term.
 
@@ -116,19 +116,19 @@ The dynamic shifted from “we need the partner or Aldwin to make changes” to 
 
 ---
 
-# Results
+## Results
 
-## Technical and operational
+### Technical and operational
 
 - Successfully migrated **11 systems and 8 services** from an external tech partner into the client’s own cloud ecosystem  
 - Implemented **standardized CI/CD pipelines** across 6 key projects  
 - Enabled developers to deploy to QA **4–8 times per sprint**, consistently and safely  
 
-## Financial
+### Financial
 
 - Achieved approximately **17% reduction in monthly cloud costs**, driven by better visibility, cleaner environments, and eliminating waste  
 
-## Team and ownership
+### Team and ownership
 
 - The organization moved from relying on an external partner to **full internal ownership** of its systems and infrastructure  
 - The development team became **more self-sufficient**, less dependent on external vendors or a single internal lead  
@@ -136,9 +136,9 @@ The dynamic shifted from “we need the partner or Aldwin to make changes” to 
 
 ---
 
-# My takeaway
+## My takeaway
 
-> **Phasing out a tech partner isn’t just about transferring code. It’s about transferring ownership.**
+> **Transitioning away from a tech partner isn’t just about transferring code. It’s about transferring ownership.**
 
 If your systems can’t be:
 
@@ -149,3 +149,15 @@ If your systems can’t be:
 …then you don’t really own them yet.
 
 Lean software teams need **replicable, deterministic processes** so that when partners change or people move on, the delivery of the business doesn’t stall.
+
+---
+
+## Work with me
+
+If you’re planning to transition away from a technology partner, migrate systems into your own cloud, or standardize CI/CD so your team can ship without fear, I can help you design and execute that transition.
+
+- Turn opaque vendor setups into **clear, documented ownership**  
+- Migrate systems into **your** cloud ecosystem  
+- Give your in-house team the **processes and tooling** to run everything confidently  
+
+[Get in touch to discuss your transition](/contact)
