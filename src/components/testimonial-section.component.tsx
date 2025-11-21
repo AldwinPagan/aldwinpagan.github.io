@@ -1,39 +1,46 @@
 'use client'
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Card, CardContent } from "./ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import { Quote } from "lucide-react"
 import { motion } from "framer-motion"
 
-  const testimonials = [
-      {
-        quote:
-          "Since joining the team on January 15, 2018, Aldwin has consistently demonstrated enthusiasm and a positive attitude, contributing significantly to the development of various challenging projects in the science and innovation sector. "
-          +"His effective communication skills and ability to visually explain detailed diagrams have played a crucial role in enhancing the product and navigating high-stress circumstances with ease.",
-        name: "Andres Calle",
-        role: "CTO, AppLivio",
-        image: "/img/testimonials/andres-calle.jpg",
-      },
-    {
-      quote:
-        "Aldwin has advised me in a way that I can understand. He keeps me actively involved in the development process and informed of progress. "
-        +"Thanks to him, we have conceptualized and developed Assist787 aligning with my vision.",
-      name: "Luis Velazquez",
-      role: "CEO, Assist787",
-      image: "/img/testimonials/maria.jpg",
-    },
-    {
-      quote:
-        "From the moment Aldwin joined us, he embraced every challenge with enthusiasm and confidence. " 
-        + "His deep experience spanning over nine years in both startup and enterprise environments has equipped him with a remarkable ability to navigate complex systems and deliver scalable, robust solutions. " 
-        + "In November 2024, Aldwin took on the role of Technical Lead, where he has gone above and beyond in guiding our team toward excellence.",
-      name: "Carlos Gonzalez",
-      role: "Principal, Integrum",
-      image: "/img/testimonials/carlos-gonzalez.jpg",
-    },
-  ]
+const testimonialData = [
+  {
+    quote:
+      "Since joining the team on January 15, 2018, Aldwin has consistently demonstrated enthusiasm and a positive attitude, contributing significantly to the development of various challenging projects in the science and innovation sector. "
+      +"His effective communication skills and ability to visually explain detailed diagrams have played a crucial role in enhancing the product and navigating high-stress circumstances with ease.",
+    name: "Andres Calle",
+    role: "CTO, AppLivio",
+    image: "/img/testimonials/andres-calle.jpg",
+  },
+  {
+    quote:
+      "Aldwin has advised me in a way that I can understand. He keeps me actively involved in the development process and informed of progress. "
+      +"Thanks to him, we have conceptualized and developed Assist787 aligning with my vision.",
+    name: "Luis Velazquez",
+    role: "CEO, Assist787",
+    image: "/img/testimonials/maria.jpg",
+  },
+  {
+    quote:
+      "From the moment Aldwin joined us, he embraced every challenge with enthusiasm and confidence. " 
+      + "His deep experience spanning over nine years in both startup and enterprise environments has equipped him with a remarkable ability to navigate complex systems and deliver scalable, robust solutions. " 
+      + "In November 2024, Aldwin took on the role of Technical Lead, where he has gone above and beyond in guiding our team toward excellence.",
+    name: "Carlos Gonzalez",
+    role: "Principal, Integrum",
+    image: "/img/testimonials/carlos-gonzalez.jpg",
+  },
+]
 
 export default function TestimonialsSection() {
+  const testimonials = [...testimonialData.map(item => ({
+    ...item,
+    image: useBaseUrl(item.image)
+  }))]
+
+
   return (
     <section
       id="testimonials"
