@@ -160,4 +160,4 @@ If you’re planning to transition away from a technology partner, migrate syste
 - Migrate systems into **your** cloud ecosystem  
 - Give your in-house team the **processes and tooling** to run everything confidently  
 
-[Get in touch to discuss your transition](/contact)
+[Get in touch to discuss your transition](/#contact)
