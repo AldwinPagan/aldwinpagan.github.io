@@ -9,6 +9,7 @@ const config: Config = {
   tagline: 'Aldwin Pagan - Scalable, cost-efficient systems for the AI era.',
   // favicon: 'img/favicon.ico',
 
+  staticDirectories: ['public', 'static'],
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -36,7 +37,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en','es'],
+    locales: ['en'],
   },
 
   presets: [
@@ -85,7 +86,7 @@ const config: Config = {
         {to: '#challenges', label: 'Why Choose Me?', position: 'right'},
         {to: '#testimonials', label: 'Testimonials', position: 'right'},
         {to: '#contact', label: 'Contact Me', position: 'right'},
-        // {to: '/blog', label: 'Blog', position: 'right'},
+        {to: '/blog', label: 'Blog', position: 'right'},
       ],
     },
     footer: {
@@ -139,7 +140,10 @@ const config: Config = {
           label: 'LinkedIn',
           to: 'https://www.linkedin.com/in/aldwinpagan/',
         },
-
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
       ],
     },
     // prism: {
