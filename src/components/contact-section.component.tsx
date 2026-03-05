@@ -28,7 +28,7 @@ export default function ContactSection() {
       >
         <Button size="lg" >
           <a
-            href="https://forms.gle/cu2vNfYstvaRoKuU7"
+            href="https://calendar.app.google/jNdzFAbrFs8FJFVD7"
             target="_blank"
           >
             <span className="text-white flex items-center">
@@ -44,3 +44,4 @@ Let’s Build Together <ArrowRight className="ml-2 w-4 h-4" />
     </section>
   )
 }
+
